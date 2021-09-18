@@ -47,8 +47,15 @@ function setup(){
     slingshot = new SlingShot(bird.body,{x:200, y:50});
 }
 
-function draw(){
-    background(backgroundImg);
+function draw() {
+  
+  if(backgroundImg)
+        background(backgroundImg);
+        fill("yellow");
+        textSize(16);
+        text("Score"+score,width-300,50);
+  
+  
     Engine.update(engine);
     //strokeWeight(4);
     box1.display();
